@@ -3,16 +3,13 @@ import { Template } from 'meteor/templating';
 import './login.html';
 
 Template.login.events({
-  'form submit'(event) {
+  'submit form'(event) {
     event.preventDefault();
 
-    const credentials = {
-      email: event.target.email.value,
-      password: event.target.password.value,
-    };
-    // console.log(`credentials: ${credentials}`);
+    const email = event.target.email.value;
+    const password = event.target.password.value;
 
-    Meteor.loginWithPassword(credentials, (err) => {
+    Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
         console.log(`err: ${err}`);
       } else {

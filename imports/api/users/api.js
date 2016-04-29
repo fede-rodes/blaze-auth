@@ -1,31 +1,29 @@
-/*
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { _ } from 'meteor/underscore';
 import { Roles } from 'meteor/alanning:roles';
 import { Users } from './namespace.js';
 import './collection.js'; // Meteor.users
-*/
+
 /**
 * @summary Initialize default admin(s).
 */
-/*
 Users.api.init = function () {
   console.log('PRE-POPULATE USERS COLLECTION');
   const defaultUsers = [
-    { username: 'admin', password: 'AdminPsw', roles: ['admin'] },
+    { email: 'admin@example.com', password: 'apple1', roles: ['admin'], username: 'admin' },
   ];
 
   _.each(defaultUsers, (user) => {
     // Check if user already exist
-    const userExists = !!Meteor.users.findOne({ username: user.username });
+    const userExists = !!Accounts.findUserByEmail(user.email);
     if (userExists) {
       return; // skip to the next iteration
     }
 
     // If not, insert user
     const id = Accounts.createUser({
-      username: user.username,
+      email: user.email,
       password: user.password,
       profile: { name: user.username },
     });
@@ -37,4 +35,3 @@ Users.api.init = function () {
     }
   });
 };
-*/

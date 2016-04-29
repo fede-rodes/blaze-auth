@@ -52,6 +52,7 @@ Meteor.users.attachSchema(new SimpleSchema({
   username: {
     type: String,
     max: 150,
+    optional: true,
   },
 
   createdAt: {

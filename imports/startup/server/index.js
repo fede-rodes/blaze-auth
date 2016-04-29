@@ -13,7 +13,7 @@
 
 // Import all your publications
 // import '../../api/domain/server/publications.js';
-/*
+
 import { Meteor } from 'meteor/meteor';
 import { Users } from '../../api/users/namespace.js';
 import '../../api/users/api.js'; // Users.api
@@ -23,4 +23,3 @@ Meteor.startup(() => {
   // Setup default users
   Users.api.init();
 });
-*/
