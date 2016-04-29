@@ -1,0 +1,11 @@
+<!--
+USAGE: {{#forceLogin}}stuff{{/forceLogin}}
+-->
+<template name="forceLogin">
+  {{#if currentUser}}
+    {{> Template.contentBlock}}
+  {{else}}
+    Please login to see the content of this page!
+    {{> login}}
+  {{/if}}
+</template>
