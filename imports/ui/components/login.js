@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import './login.html';
+import './forgotPassword.js';
 
 Template.login.events({
   'submit form'(event) {
@@ -16,5 +17,10 @@ Template.login.events({
         console.log('Logged in!');
       }
     });
-  }
+  },
+  'click .js-forgot-password'(event) {
+    event.preventDefault();
+
+    BlazeLayout.render('appContainer', { main : 'forgotPassword' });
+  },
 });

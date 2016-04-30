@@ -2,7 +2,7 @@
 // for instance domain could be 'posts'.
 
 // Import your server-side configs
-// import './config.js';
+import './config.js';
 
 // Import all your server-side collections
 // import '../../api/domain/both/collection.js';
