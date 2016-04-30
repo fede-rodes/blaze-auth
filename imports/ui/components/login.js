@@ -17,6 +17,8 @@ Template.login.events({
         console.log(`err: ${err}`);
       } else {
         console.log('Logged in!');
+        const curRoute = FlowRouter.getRouteName();
+        FlowRouter.go(curRoute);
       }
     });
   },

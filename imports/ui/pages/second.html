@@ -2,7 +2,9 @@
   {{#defaultLayout}}
     <h1>Second Page</h1>
     {{#forceLogin}}
-      <h4>Hello, {{username}}! This page can only be seen by you :)</h4>
+      {{#forceVerify}}
+        <h4>Hello, {{username}}! This page can only be seen by you :)</h4>
+      {{/forceVerify}}
     {{/forceLogin}}
   {{/defaultLayout}}
 </template>

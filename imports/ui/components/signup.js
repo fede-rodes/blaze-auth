@@ -21,6 +21,7 @@ Template.signup.events({
             console.log(err2.reason);
           } else {
             console.log('verification email sent!');
+            BlazeLayout.render('appContainer', { main : 'login' });
           }
         });
       }

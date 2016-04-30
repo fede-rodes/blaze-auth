@@ -1,0 +1,15 @@
+<!--
+USAGE: {{#forceVerify}}stuff{{/forceVerify}}
+-->
+<template name="forceVerify">
+  {{#unless currentUser.emails.[0].verified}}
+    <p class="alert alert-warning">
+      You need to verify your email address before using Site Name.
+      <a href="#" class="js-resend-verification-link">
+        Resend verification link
+      </a>.
+    </p>
+  {{else}}
+    {{> Template.contentBlock}}
+  {{/unless}}
+</template>
