@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import './forgotPassword.html';
+import './forgot-password.html';
 
 Template.forgotPassword.events({
   'submit form'(event) {

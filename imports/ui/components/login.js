@@ -1,7 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import './login.html';
-import './forgotPassword.js';
+import './forgot-password.js';
+import './signup.js';
 
 Template.login.events({
   'submit form'(event) {
@@ -22,5 +24,10 @@ Template.login.events({
     event.preventDefault();
 
     BlazeLayout.render('appContainer', { main : 'forgotPassword' });
+  },
+  'click .js-signup'(event) {
+    event.preventDefault();
+
+    BlazeLayout.render('appContainer', { main : 'signup' });
   },
 });

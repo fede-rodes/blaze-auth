@@ -42,6 +42,7 @@ Meteor.users.attachSchema(new SimpleSchema({
 
   profile: {
     type: Object,
+    optional: true,
   },
 
   'profile.name': {
