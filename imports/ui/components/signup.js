@@ -21,7 +21,8 @@ Template.signup.events({
             console.log(err2.reason);
           } else {
             console.log('verification email sent!');
-            BlazeLayout.render('appContainer', { main : 'login' });
+            // BlazeLayout.render('appContainer', { main : 'login' });
+            FlowRouter.reload();
           }
         });
       }
@@ -29,7 +30,6 @@ Template.signup.events({
   },
   'click .js-login'(event) {
     event.preventDefault();
-
     BlazeLayout.render('appContainer', { main : 'login' });
   },
 });

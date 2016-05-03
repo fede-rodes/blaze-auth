@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import './app.html';
-import '../components/header.html';
+import '../components/spinner.html';
 import '../components/login.js';
 
 Template.appContainer.onCreated(function () {

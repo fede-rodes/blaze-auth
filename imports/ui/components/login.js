@@ -17,19 +17,18 @@ Template.login.events({
         console.log(`err: ${err}`);
       } else {
         console.log('Logged in!');
-        const curRoute = FlowRouter.getRouteName();
-        FlowRouter.go(curRoute);
+        // const curRoute = FlowRouter.getRouteName();
+        // FlowRouter.go(curRoute);
+        FlowRouter.reload();
       }
     });
   },
   'click .js-forgot-password'(event) {
     event.preventDefault();
-
     BlazeLayout.render('appContainer', { main : 'forgotPassword' });
   },
   'click .js-signup'(event) {
     event.preventDefault();
-
     BlazeLayout.render('appContainer', { main : 'signup' });
   },
 });
